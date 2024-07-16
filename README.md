@@ -28,7 +28,7 @@ or
 ```
 node ./app.js
 ```
-Then just open your browser in [localhost]https://localhost:8081 and all should be appearing.
+Then just open your browser in [localhost](https://localhost:8081) and all should be appearing.
 
 # Screenshots
 
