@@ -5,7 +5,7 @@ A small project build with NodeJs, Express, Sequelize and Handlebars, that join 
 
 First of all you will need to install the tools that in needed run the project locally, NodeJS and MySQL who can be found in the following links:
 
-[node]https://nodejs.org/
+[node](https://nodejs.org/)
 
 [mysql](https://www.mysql.com/downloads/)
 
