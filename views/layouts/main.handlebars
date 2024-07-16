@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: bisque;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: auto;
+            background-color: white;
+            
+        }
+        ol{
+            font-size: larger;
+            padding-left: 1%;
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 400;
+        }
+        ol:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Home Page</title>
+</head>
+<body>
+    <nav>
+        <ol class="home">Home</ol>
+        <ol class="page">Page</ol>
+        <ol class="about">About</ol>
+    </nav>
+
+    {{{body}}}
+
+    <script>
+        let home = document.querySelector(".home");
+        let page = document.querySelector(".page");
+        let about = document.querySelector(".about");
+
+        home.addEventListener("click", (event)=>{
+            if (event) {
+                location.href = "http://localhost:8081/"                
+            }
+        })
+        
+        page.addEventListener("click", (event)=>{
+            if (event) {
+                location.href = "http://localhost:8081/page"                
+            }
+        })
+
+        about.addEventListener("click", (event)=>{
+            if (event) {
+                location.href = "http://localhost:8081/about"                
+            }
+        })
+        
+    </script>
+</body>
+</html>

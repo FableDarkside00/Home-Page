@@ -1,0 +1,83 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    main{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        position: relative;
+        align-items: center;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    form{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        background-color: white;
+        padding: 2%;
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.22);
+    }
+
+    .title{
+        align-self: self-start;
+        padding-left: 3vw;
+    }
+
+    input{
+        width: 90%;
+        height: 5vh;
+        border-radius: 15px;
+        font-size: large;
+        
+    }
+
+    button{
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: large;
+        color: black;
+        background-color: bisque;
+        padding: 2%;
+        border-radius: 15px;
+    }
+
+    button:hover{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    
+    }
+
+
+</style>
+<main>
+    <form action="form" method="post" class = "form">
+        <h2 class="title">Formulário de Cadastro</h2>
+        <input type="text" name="name" id="name" placeholder="Insira seu nome">
+        <input type="password" name="passwd" id="passwd" placeholder="Insira uma senha">
+        <button type="submit">Cadastrar</button>
+    </form>
+</main>
+
+<script>
+    const form = document.querySelector(".form");
+
+    form.addEventListener("submit", function(event) {
+        const nameInput = document.querySelector("#name");
+        const passwdInput = document.querySelector("#passwd");
+
+        if (nameInput.value.trim() === "" || passwdInput.value.trim() === "") {
+            event.preventDefault();
+            alert("Por Favor Insira Dados Validos!")
+        }
+    });
+</script>

@@ -1,0 +1,87 @@
+<style>
+      main{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        position: relative;
+        align-items: center;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    section{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        background-color: white;
+        padding: 2%;
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.22);
+    }
+
+
+    .add{
+        display: flex;
+        align-self: self-end;
+        font-size: x-large;
+        cursor: pointer;
+        border: 1px solid;
+        padding: 0.8%;
+        border-radius: 15px; 
+        background-color: bisque;   
+    }
+
+    .add:hover, .fa-plus:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .title{
+        display: flex;
+        align-self: self-start;
+        padding-left: 3vw;
+    }
+
+    .list{
+        align-self: self-start;
+        width: 80%;
+        padding-left: 3vw;
+        list-style: none;
+    }
+
+    .list:hover{
+        text-decoration: none;
+        cursor: default;
+    }
+    .fa-trash, .fa-pencil, .fa-plus{
+        cursor: pointer;
+        color: black;
+    }
+
+
+</style>
+
+<script src="https://kit.fontawesome.com/cd16a74d4d.js" crossorigin="anonymous"></script>
+
+<main>
+    <section>
+    <div class="add"><a href="/page"><i class="fa-solid fa-plus"></a></i></div>
+    <h2 class="title">Lista de usuários </h2>
+    <ol class="list">
+        {{#each users}}
+            <li><b>Nome:</b> {{name}} | <b>Senha:</b> {{passwd}} |  
+                <a href="/del/{{id}}"><i class="fa-solid fa-trash"></i></a> 
+                <a href="/edit/{{name}}"><i class="fa-solid fa-pencil"></i></a> 
+            </li>
+            <hr>
+        {{/each}}
+
+    </ol>
+    </section>
+</main>
